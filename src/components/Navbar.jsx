@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
   <nav>
     <div>
-        <img src="/images/logo.svg" atl="logo"/>
+        <img src="/images/logo.svg" alt="logo"/>
         <p className="font-bold"> Srichandra's Portfolio</p>
 
         <ul>
@@ -21,7 +21,7 @@ const Navbar = () => {
         <ul>
             {navIcons.map(({ id, img }) => (
               <li key ={id}>
-                <img src={img} className="icon-hover" alt={`icon-${id}`} />
+                <img src={img} className="icon" alt={`icon-${id}`} />
               </li>
             ))}
         </ul>
