@@ -3,9 +3,12 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import gsap from "gsap";
 import useWindowStore from "#store/window.js";
+import useLocationStore from "#store/location";
+import { trashLocation } from "#store/fileSystem";
 
 const Dock = () => {
   const { openWindow, windows, closeWindow } = useWindowStore();
+  const setActiveLocation = useLocationStore((state) => state.setActiveLocation);
   const dockRef = useRef(null);
 
   useGSAP(() => {
@@ -61,6 +64,12 @@ const Dock = () => {
 
   const toggleApp = (app) => {
     if (!app.canOpen) return;
+
+    if (app.id === "trash") {
+      setActiveLocation(trashLocation);
+      openWindow("finder");
+      return;
+    }
 
     const window = windows[app.id];
 

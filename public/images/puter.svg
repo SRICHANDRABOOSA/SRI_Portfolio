@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Puter Cloud">
+  <defs>
+    <linearGradient id="puter-a" x1="18" x2="110" y1="16" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34d399"/>
+      <stop offset=".52" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#f8fafc"/>
+  <path fill="url(#puter-a)" d="M48 92h45.5C105.4 92 115 82.4 115 70.5S105.4 49 93.5 49h-1.1C88.1 36.4 76.2 27 62 27c-17.7 0-32 14.3-32 32v.5C20.3 62.2 13 71.1 13 81.5 13 93.4 22.6 103 34.5 103H48V92Z"/>
+  <path fill="#0f172a" fill-opacity=".86" d="M45 92h45.5c9.1 0 16.5-7.4 16.5-16.5S99.6 59 90.5 59h-5.2l-1-5.1C81.9 41.8 71.2 33 59 33c-14.9 0-27 12.1-27 27v6.2l-5.5 1.6C20.3 69.6 16 75.3 16 81.5 16 88.4 21.6 94 28.5 94H45v-2Z" opacity=".12"/>
+  <path fill="#fff" d="M46 84h45c7.5 0 13.5-6 13.5-13.5S98.5 57 91 57h-5.8l-.8-4.1C82.2 41.4 72 33 60.3 33 46.3 33 35 44.3 35 58.3V65l-5.9 1.7c-5 1.4-8.6 6.1-8.6 11.3 0 6.6 5.4 12 12 12H46v-6Z"/>
+  <circle cx="62" cy="61" r="7" fill="#22c55e"/>
+  <path fill="#0f172a" d="M77 56h13v9H77zM41 56h13v9H41zM53 76h25v7H53z"/>
+</svg>

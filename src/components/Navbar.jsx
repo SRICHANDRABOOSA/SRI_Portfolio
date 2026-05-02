@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
-import { locations, navIcons, navLinks } from "#constants";
+import { navIcons, navLinks } from "#constants";
+import { desktopLocation } from "#store/fileSystem";
 import useLocationStore from "#store/location";
 import useWindowStore from "#store/window";
 
@@ -9,7 +10,7 @@ const Navbar = () => {
 
   const handleNavClick = (type) => {
     if (type === "finder") {
-      setActiveLocation(locations.work);
+      setActiveLocation(desktopLocation);
     }
 
     openWindow(type);

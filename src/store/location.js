@@ -1,7 +1,7 @@
-import { locations } from "#constants";
 import createStore from "#store/createStore";
+import { desktopLocation } from "#store/fileSystem";
 
-const DEFAULT_LOCATION = locations.work;
+const DEFAULT_LOCATION = desktopLocation;
 const useLocationStore = createStore((set) => ({
   activeLocation: DEFAULT_LOCATION,
 

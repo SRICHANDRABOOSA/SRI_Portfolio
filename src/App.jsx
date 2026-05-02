@@ -5,6 +5,7 @@ import {
   Contact,
   Finder,
   Image,
+  PuterCloud,
   Resume,
   Safari,
   Terminal,
@@ -26,6 +27,7 @@ const App = () => {
       <Text />
       <Image />
       <Contact />
+      <PuterCloud />
       <Home />
     </main>
   );

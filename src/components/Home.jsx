@@ -1,24 +1,24 @@
-import { locations } from "#constants";
 import { useGSAP } from "@gsap/react";
-import useLocationStore from "#store/location";
-import useWindowStore from "#store/window";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { useRef } from "react";
+import useFileSystemStore from "#store/fileSystem";
+import useLocationStore from "#store/location";
+import useWindowStore from "#store/window";
 
 gsap.registerPlugin(Draggable);
 
-const projects = locations.work?.children ?? [];
 const Home = () => {
   const homeRef = useRef(null);
-  const openWindow = useWindowStore((state) => state.openWindow);
+  const desktopItems = useFileSystemStore((state) => state.desktopItems);
   const setActiveLocation = useLocationStore((state) => state.setActiveLocation);
+  const openWindow = useWindowStore((state) => state.openWindow);
 
-  const openFolderFromHome = (project) => {
-    if (project?.kind !== "folder") return;
+  const openDesktopItem = (item) => {
+    if (item.kind !== "folder") return;
 
-    setActiveLocation(project);
-    openWindow("finder", project);
+    setActiveLocation(item);
+    openWindow("finder");
   };
 
   useGSAP(() => {
@@ -49,19 +49,19 @@ const Home = () => {
     return () => {
       draggables.forEach((dragInstance) => dragInstance?.kill());
     };
-  }, []);
+  }, [desktopItems]);
 
   return (
     <section id="home" ref={homeRef}>
       <ul>
-        {projects.map((project) => (
+        {desktopItems.map((item) => (
           <li
-            key={project.id}
-            className={`group folder ${project.windowPosition ?? ""}`}
-            onClick={() => openFolderFromHome(project)}
+            key={item.id}
+            className={`group folder ${item.desktopPosition ?? ""}`}
+            onClick={() => openDesktopItem(item)}
           >
-            <img src="/images/folder.png" alt={project.name} />
-            <p>{project.name}</p>
+            <img src={item.icon} alt={item.name} />
+            <p>{item.name}</p>
           </li>
         ))}
       </ul>
