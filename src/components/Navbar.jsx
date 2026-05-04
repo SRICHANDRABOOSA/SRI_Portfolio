@@ -1,18 +1,11 @@
 import dayjs from "dayjs";
 import { navIcons, navLinks } from "#constants";
-import { desktopLocation } from "#store/fileSystem";
-import useLocationStore from "#store/location";
 import useWindowStore from "#store/window";
 
 const Navbar = () => {
   const openWindow = useWindowStore((state) => state.openWindow);
-  const setActiveLocation = useLocationStore((state) => state.setActiveLocation);
 
   const handleNavClick = (type) => {
-    if (type === "finder") {
-      setActiveLocation(desktopLocation);
-    }
-
     openWindow(type);
   };
 

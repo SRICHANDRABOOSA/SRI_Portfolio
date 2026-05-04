@@ -2,7 +2,7 @@ const navLinks = [
   {
     id: 1,
     name: "Projects",
-    type: "finder",
+    type: "safari",
   },
   {
     id: 3,
@@ -81,7 +81,13 @@ const dockApps = [
 ];
 
 const blogPosts = [
-
+  {
+    id: 1,
+    image: "/images/blog1.png",
+    title: "SPACEIFY_AI",
+    date: "AI Project",
+    link: "https://spaceify-ai.vercel.app/",
+  },
 ];
 
 const techStack = [
