@@ -92,28 +92,77 @@ const blogPosts = [
 
 const techStack = [
   {
-    category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
+    category: "Languages",
+    items: [
+      "Java SE",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "Python",
+      "C++",
+      "SQL",
+    ],
   },
   {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
+    category: "OOP & Design",
+    items: [
+      "Object-Oriented Programming",
+      "Interfaces & Inheritance",
+      "Design Patterns",
+      "SOLID Principles",
+      "Clean Code",
+    ],
   },
   {
-    category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    category: "Databases",
+    items: [
+      "PostgreSQL",
+      "Microsoft SQL Server",
+      "MongoDB",
+      "Firebase",
+      "Relational Schema Design",
+      "SQL Query Optimization",
+    ],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "Service-Layer Design",
+      "API Integration",
+      "Authentication",
+    ],
   },
   {
-    category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    category: "Frontend",
+    items: ["React.js", "Next.js", "React Native", "Tailwind CSS", "ShadCN UI"],
   },
   {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    category: "SAP ABAP",
+    items: [
+      "ABAP Fundamentals",
+      "Object-Oriented ABAP",
+      "Core Data Services (CDS)",
+      "AMDP",
+      "RAP",
+      "ADT on Eclipse",
+    ],
+  },
+  {
+    category: "Testing & Tools",
+    items: [
+      "Jest",
+      "Debugging & Optimization",
+      "Git",
+      "GitHub",
+      "CI/CD",
+      "Agile/Scrum",
+      "Jira",
+      "SDLC",
+      "Eclipse IDE",
+      "Vercel",
+    ],
   },
 ];
 
